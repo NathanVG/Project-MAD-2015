@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:paddingTop="25dp"
+        android:paddingLeft="20dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="KSA Rumbeke"
+        android:id="@+id/txbksaNaam"
+        android:textColor="#ff9d9d9d"
+        android:layout_marginBottom="45dp"/>
+
+</RelativeLayout>
