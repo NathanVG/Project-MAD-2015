@@ -7,6 +7,7 @@ import android.location.Geocoder;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,8 +67,13 @@ public class KSAKaartFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_ksakaart, container, false);
         mapView = (MapView) v.findViewById(R.id.KSAkaart);
+
+
+
         mapView.onCreate(savedInstanceState);
         mapView.onResume();
+
+        setMapView(mapView);
 
         return v;
 
@@ -107,6 +113,7 @@ public class KSAKaartFragment extends Fragment {
 
                             latitude = location.getLatitude();
                             longitude = location.getLongitude();
+                            CENTER = new LatLng(latitude, longitude);
                         }
                         catch (Exception ex) {
                             System.out.println(ex);
